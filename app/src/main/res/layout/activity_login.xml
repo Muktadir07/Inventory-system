@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/userloginTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="User Login"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="32sp"
+        android:layout_marginTop="20dp"
+        />
+    <LinearLayout
+        android:id="@+id/userLout"
+        android:layout_below="@+id/userloginTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_man_user"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:id="@+id/userNameET"
+            android:layout_weight="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User Name"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/passwordLOUT"
+        android:layout_below="@+id/userLout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:src="@drawable/ic_key"
+            android:layout_gravity="center"
+            />
+        <EditText
+            android:id="@+id/passwordET"
+            android:layout_weight="0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            android:hint="Password"
+            android:fontFamily="sans-serif-medium"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginBTN"
+        android:layout_below="@id/passwordLOUT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/White"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:textStyle="bold"
+        android:onClick="loginToNext"/>
+
+
+</RelativeLayout>
